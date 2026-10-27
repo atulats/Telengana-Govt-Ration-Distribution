@@ -1,0 +1,12 @@
+altair>=5.5,<7
+nbformat>=5.10,<6
+numpy>=1.26,<3
+pandas>=2.2,<4
+pyarrow>=14,<26
+pydeck>=0.9,<1
+pymupdf>=1.24,<2
+pypdf>=5,<7
+reportlab>=4,<5
+scikit-learn>=1.5,<2
+scipy>=1.11,<2
+streamlit>=1.64,<2

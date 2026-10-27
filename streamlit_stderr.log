@@ -1,0 +1,31 @@
+2026-10-03 09:03:06.582 Uvicorn server started on :::8501
+2026-10-03 09:03:08.997 Did not auto detect external IP.
+Please go to https://docs.streamlit.io/ for debugging hints.
+2026-10-03 09:07:19.706 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "c:\Users\ATUL\OneDrive\Desktop\Project\Flight analytics\.venv\Lib\site-packages\streamlit\dataframe_util.py", line 959, in convert_pandas_df_to_arrow_table
+    return pa.Table.from_pandas(df, preserve_index=preserve_index)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4769, in pyarrow.lib.Table.from_pandas
+  File "c:\Users\ATUL\OneDrive\Desktop\Project\Flight analytics\.venv\Lib\site-packages\pyarrow\pandas_compat.py", line 656, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+              ~~~~~~~~~~~~~~^^^^^^
+  File "c:\Users\ATUL\OneDrive\Desktop\Project\Flight analytics\.venv\Lib\site-packages\pyarrow\pandas_compat.py", line 644, in convert_column
+    raise e
+  File "c:\Users\ATUL\OneDrive\Desktop\Project\Flight analytics\.venv\Lib\site-packages\pyarrow\pandas_compat.py", line 638, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow/array.pxi", line 408, in pyarrow.lib.array
+  File "pyarrow/array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+    check_status(NdarrayToArrow(pool, values, mask, from_pandas,
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column value with type object')
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\ATUL\AppData\Local\Programs\Python\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ATUL\AppData\Local\Programs\Python\Python314\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host

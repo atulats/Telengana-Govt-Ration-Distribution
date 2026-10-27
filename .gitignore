@@ -1,0 +1,16 @@
+.venv/
+vendor/
+wheels/
+tmp_pip/
+tmp/
+__pycache__/
+.pytest_cache/
+*.pyc
+data/raw/**/*.csv
+data/raw/download_manifest.json
+output/pdf/*.png
+streamlit_*.log
+tmp_*.py
+tmp_*.js
+tmp_*.html
+search_*.json
